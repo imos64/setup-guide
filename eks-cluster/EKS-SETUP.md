@@ -10,10 +10,8 @@ Ensure the following tools are installed on your local machine:
 
 | Tool    | Description                | Install Link |
 | ------- | -------------------------- | ------------ |
-| AWS CLI | AWS Command Line Interface |              |
-
-| [https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) |                                     |                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------- |
+| AWS CLI | AWS Command Line Interface | [https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)  |                                                                                            |
+|  |
 | kubectl                                                                                                                                    | Kubernetes CLI tool                 | [https://kubernetes.io/docs/tasks/tools/](https://kubernetes.io/docs/tasks/tools/)           |
 | eksctl                                                                                                                                     | CLI tool for EKS cluster management | [https://eksctl.io/introduction/#installation](https://eksctl.io/introduction/#installation) |
 
@@ -64,7 +62,10 @@ Attach the following AWS managed policies:
 
 - `AmazonEKSClusterPolicy`
 - `AmazonEKSWorkerNodePolicy`
+- `AmazonEKSVPCControllerPolicy`
 - `AmazonEC2ContainerRegistryReadOnly`
+- `AmazonEKSVPCControllerPolicy`
+- `EKSAdminFullAccess`
 
 ---
 
