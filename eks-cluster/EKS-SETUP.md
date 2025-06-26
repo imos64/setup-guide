@@ -8,12 +8,49 @@ This guide provides a comprehensive walkthrough for creating and managing an Ama
 
 Ensure the following tools are installed on your local machine:
 
-| Tool    | Description                | Install Link |
-| ------- | -------------------------- | ------------ |
-| AWS CLI | AWS Command Line Interface | [https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)  |                                                                                            |
-|  |
-| kubectl                                                                                                                                    | Kubernetes CLI tool                 | [https://kubernetes.io/docs/tasks/tools/](https://kubernetes.io/docs/tasks/tools/)           |
-| eksctl                                                                                                                                     | CLI tool for EKS cluster management | [https://eksctl.io/introduction/#installation](https://eksctl.io/introduction/#installation) |
+- Linux system with `curl`, `unzip`, and `sudo` installed
+- x86_64 architecture
+
+## Installation Guide For AWS CLI, kubectl, and eksctl (Linux x86_64)
+```bash
+1. Install AWS cli
+##Download the AWS CLI v2 ZIP installer
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+##Unzip the downloaded package
+unzip awscliv2.zip
+
+##Run the installer
+sudo ./aws/install
+
+##Verify the installation
+aws --version
+
+
+2. Install kubectl 
+##Download the latest stable release of kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+##Make the binary executable
+chmod +x kubectl
+
+##Move the binary to your system's PATH
+sudo mv kubectl /usr/local/bin/
+
+##Verify the installation
+kubectl version --client
+
+
+3. Install eksctl 
+##Download and extract the latest release to /tmp
+curl --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+
+##Move the binary to your system's PATH
+sudo mv /tmp/eksctl /usr/local/bin
+
+##Verify the installation
+eksctl version
+
 
 ### ✅ Verify Installation
 
@@ -22,7 +59,7 @@ aws --version
 kubectl version --client
 eksctl version
 ```
-
+Configure AWS credentials using:
 ---
 
 ## 🔐 Configure AWS CLI
