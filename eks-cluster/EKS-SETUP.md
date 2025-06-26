@@ -1,4 +1,4 @@
-# Amazon EKS Cluster Setup Guide
+# AWS EKS Cluster Setup Guide
 
 This guide provides a comprehensive walkthrough for creating and managing an Amazon Elastic Kubernetes Service (EKS) cluster from your local machine using `eksctl`.
 
